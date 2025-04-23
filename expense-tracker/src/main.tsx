@@ -1,13 +1,20 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App.tsx';
+import App from './App';
+import Login from './Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './context/GlobalState';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <GlobalProvider>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/tracker" element={<App />} />
+        </Routes>
+      </BrowserRouter>
     </GlobalProvider>
-  </StrictMode>
+  </React.StrictMode>
 );
