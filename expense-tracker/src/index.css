@@ -52,6 +52,24 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+
+li button {
+  width: 60px;
+  height: 45px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li button:hover {
+  background-color: #832b2b;
+}
+
 body,
 html {
   margin: 0;
@@ -80,10 +98,21 @@ html {
   position: relative;
   z-index: 1;
   max-width: 600px;
-  margin: auto;
+  height: 80vh;
+  /* Set height to control space */
+  overflow-y: auto;
+  /* Enables scroll inside */
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
+  margin: auto;
+}
+.App::-webkit-scrollbar {
+  width: 8px;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
