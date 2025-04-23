@@ -108,11 +108,27 @@ html {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   margin: auto;
 }
+/* Only show scrollbar when scrolling inside .App */
+.App {
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
 .App::-webkit-scrollbar {
   width: 8px;
 }
 
+.App::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .App::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  visibility: hidden;
+}
+
+.App:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
