@@ -99,14 +99,12 @@ html {
   z-index: 1;
   max-width: 600px;
   height: 80vh;
-  /* Set height to control space */
   overflow-y: auto;
-  /* Enables scroll inside */
   background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  margin: auto;
+  margin: 80px auto 0; /* Add margin-top to create space below the navbar */
 }
 /* Only show scrollbar when scrolling inside .App */
 .App {
@@ -131,4 +129,57 @@ html {
 
 .App:hover::-webkit-scrollbar-thumb {
   visibility: visible;
+}
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.navbar-section {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-section.left {
+  flex: 1;
+}
+
+.navbar-section.center {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-section.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-welcome {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #1b5e20;
 }

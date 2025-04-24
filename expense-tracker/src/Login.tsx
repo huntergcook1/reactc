@@ -7,8 +7,10 @@ const Login: React.FC = () => {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
+        localStorage.setItem('username', username); // save username
         navigate('/tracker');
     };
+
 
     return (
         <div className="AppWrapper">
